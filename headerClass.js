@@ -61,7 +61,7 @@ class Headers {
         for(let i = 0; i < csvObj.arangedHeaders.length; i++){
             if(csvObj.arangedHeaders[i] !== headersTemplate[i]) areHeadersOk = false; break;
         }
-        if(areHeadersOk === true) return csvObj;
+        if(areHeadersOk === true) return csvObj; else return false
          
         
 

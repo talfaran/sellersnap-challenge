@@ -21,7 +21,11 @@ csv
         //looping to find the headers and rearanged them to the correct order
         if(i === 0){
           var headersInfo = headers.headersArangment(usersData[i])
-          dataInCorrectOrder[i] = headersInfo.arangedHeaders            
+          if(headersInfo === false){
+              return 'theres a column missing';
+          } else {
+          dataInCorrectOrder[i] = headersInfo.arangedHeaders                        
+          }
         } else {
             //looping over the rows, and manipulate them according to criteria
           let rowInfo  = rows.rowArangment(usersData[i],headersInfo.originHeadersPositions)
